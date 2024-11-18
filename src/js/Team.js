@@ -7,12 +7,6 @@ export default class Team {
     this.charectors.push(character);  
   }
 
-  teamList() {
-    for (const value of this.charectors) {
-      console.log(value);
-    }
-  }
-
   teamChars() {
     let i = 0;    
 
