@@ -1,32 +1,25 @@
-// TODO: write your code here
-import Magician from './class/Magician.js';
-import Daemon from './class/Daemon.js';
+import Team from "./Team";
 
 console.log('Работает');
 
-let charA = new Daemon('Daemon');
+const char = {
+  name: 'Лучник',
+  type: 'Bowman',
+  health: 50,
+  level: 1,
+  attack: 40,
+  defence: 10
+}
 
-console.log(charA);
-console.log('базовая атака ' + charA.attack);
+let team = new Team();
 
-charA.attack = 2;
-console.log('атака расстояние 2 ' + charA.attack);
-charA.attack = 3;
-console.log('атака расстояние 3 ' + charA.attack);
-charA.attack = 4;
-console.log('атака расстояние 4 ' + charA.attack);
-charA.attack = 5;
-console.log('атака расстояние 5 ' + charA.attack);
+team.addCharector(char);
+team.addCharector(char);
 
-charA.stoned = true;
-console.log('атака ' + charA.attack);
-console.log('stoned ' + charA.stoned);
+const iterator = team.teamChars();  
 
-charA.attack = 2;
-console.log('атака расстояние 2 ' + charA.attack);
-charA.attack = 3;
-console.log('атака расстояние 3 ' + charA.attack);
-charA.attack = 4;
-console.log('атака расстояние 4 ' + charA.attack);
-charA.attack = 5;
-console.log('атака расстояние 5 ' + charA.attack);
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+
+ 
